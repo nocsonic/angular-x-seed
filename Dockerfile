@@ -1,6 +1,5 @@
 # Stage 0, "build-stage", based on Node.js, to build and compile Angular
 FROM node:10.5 as build-stage
-FROM node:alpine as builder
 
 # build-time variables
 # prod|sandbox its value will be come from outside
@@ -22,6 +21,6 @@ RUN cd /app && npm run build:$env
 FROM nginx:alpine
 RUN rm -rf /usr/share/nginx/html/*
 COPY nginx.conf /etc/nginx/nginx.conf
-COPY --from=builder /app/dist /usr/share/nginx/html
+COPY --from=builder /app-repo /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]

@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('edatower App', () => {
+describe('angular-ngrx App', () => {
   let page: AppPage;
 
   beforeEach(() => {
