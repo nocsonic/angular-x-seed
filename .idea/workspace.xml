@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2189f662-14d0-4179-8bae-a35c81a34bcd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile.dev" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/angular.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/e2e/app.e2e-spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/e2e/app.po.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/e2e/tsconfig.e2e.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/app/app-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/app/app.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/app/app.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/app/app.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/app/app.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/app/app.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/app/components/navbar/navbar.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/app/components/navbar/navbar.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/app/components/navbar/navbar.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/app/components/sidenav/sidenav.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/app/components/sidenav/sidenav.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/app/components/sidenav/sidenav.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/app/features/highcharts/actions/chart.action.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/app/features/highcharts/actions/chart.action.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/app/features/highcharts/components/chart/chart.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/app/features/highcharts/components/chart/chart.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/app/features/highcharts/components/chart/chart.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/app/features/highcharts/effects/chart.effects.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/app/features/highcharts/highcharts-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/app/features/highcharts/highcharts.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/app/features/highcharts/highcharts.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/app/features/highcharts/highcharts.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/app/features/highcharts/highcharts.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/app/features/highcharts/reducers/chart.reducer.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/app/features/highcharts/reducers/chart.reducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/app/features/highcharts/reducers/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/app/features/highcharts/selectors/chart.selector.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/app/features/highcharts/selectors/chart.selector.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/app/shared/shared.module.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/app/shared/shared.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/app/store/actions/sidebar.action.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/app/store/actions/sidebar.action.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/app/store/effects/app.effects.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/app/store/reducers/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/app/store/reducers/sidebar.reducer.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/app/store/reducers/sidebar.reducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/app/store/selectors/sidebar.selector.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/app/store/selectors/sidebar.selector.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/assets/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/environments/environment.prod.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/environments/environment.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/karma.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/polyfills.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/styles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/tsconfig.app.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/tsconfig.spec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/src/tslint.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-ui/tslint.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="angular-x-seed" />
+  </component>
+  <component name="FileColors">
+    <fileColor scope="Project Files" color="d1d1d1" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dockerfile.dev">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="567">
+              <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client-ui/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1188">
+              <caret line="44" column="46" selection-start-line="44" selection-start-column="46" selection-end-line="45" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docker-compose.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client-ui/src/app/components/navbar/navbar.component.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="27">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client-ui/src/app/components/navbar/navbar.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="28" selection-start-column="28" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client-ui/src/styles.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-302">
+              <caret line="158" column="8" selection-start-line="158" selection-start-column="8" selection-end-line="158" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client-ui/src/app/app.component.scss">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client-ui/src/app/features/highcharts/highcharts.component.scss">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client-ui/angular.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="567">
+              <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Makefile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="339">
+              <caret line="36" column="24" selection-end-line="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Dockerfile" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/docker-ng-master/src/Dockerfile.dev" />
+        <option value="$PROJECT_DIR$/client-ui/package.json" />
+        <option value="$PROJECT_DIR$/docker-compose.yml" />
+        <option value="$PROJECT_DIR$/Makefile" />
+        <option value="$PROJECT_DIR$/Dockerfile.dev" />
+        <option value="$PROJECT_DIR$/client-ui/src/app/components/navbar/navbar.component.html" />
+        <option value="$PROJECT_DIR$/client-ui/src/styles.scss" />
+        <option value="$PROJECT_DIR$/client-ui/src/app/components/navbar/navbar.component.scss" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-2560" />
+    <option name="y" value="55" />
+    <option name="width" value="2560" />
+    <option name="height" value="1271" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="angular-x-seed" type="b2602c69:ProjectViewProjectNode" />
+              <item name="angular-x-seed" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="angular-x-seed" type="b2602c69:ProjectViewProjectNode" />
+              <item name="angular-x-seed" type="462c0819:PsiDirectoryNode" />
+              <item name="client-ui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="angular-x-seed" type="b2602c69:ProjectViewProjectNode" />
+              <item name="angular-x-seed" type="462c0819:PsiDirectoryNode" />
+              <item name="client-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="angular-x-seed" type="b2602c69:ProjectViewProjectNode" />
+              <item name="angular-x-seed" type="462c0819:PsiDirectoryNode" />
+              <item name="client-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="angular-x-seed" type="b2602c69:ProjectViewProjectNode" />
+              <item name="angular-x-seed" type="462c0819:PsiDirectoryNode" />
+              <item name="client-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="angular-x-seed" type="b2602c69:ProjectViewProjectNode" />
+              <item name="angular-x-seed" type="462c0819:PsiDirectoryNode" />
+              <item name="client-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="navbar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="angular-x-seed" type="b2602c69:ProjectViewProjectNode" />
+              <item name="angular-x-seed" type="462c0819:PsiDirectoryNode" />
+              <item name="client-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="features" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="angular-x-seed" type="b2602c69:ProjectViewProjectNode" />
+              <item name="angular-x-seed" type="462c0819:PsiDirectoryNode" />
+              <item name="client-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="features" type="462c0819:PsiDirectoryNode" />
+              <item name="highcharts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="angular-x-seed" type="b2602c69:ProjectViewProjectNode" />
+              <item name="angular-x-seed" type="462c0819:PsiDirectoryNode" />
+              <item name="client-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="angular-x-seed" type="b2602c69:ProjectViewProjectNode" />
+              <item name="angular-x-seed" type="462c0819:PsiDirectoryNode" />
+              <item name="client-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="environments" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="10.13.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../wills-p" />
+    <property name="nodejs_interpreter_path" value="$USER_HOME$/.nvm/versions/node/v10.13.0/bin/node" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Material File Colors" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/docker-ng-master/src/crud-angular7-master/node_modules/typescript/lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client-ui" />
+      <recent name="$PROJECT_DIR$/docker-ng-master" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/docker-ng-master/src" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2189f662-14d0-4179-8bae-a35c81a34bcd" name="Default Changelist" comment="" />
+      <created>1546543950946</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1546543950946</updated>
+      <workItem from="1546543952248" duration="14426000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="14426000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-2560" y="55" width="2560" height="1271" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22448166" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="TypeScript" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" visible="true" weight="0.32943293" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Cargo" order="3" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app-repo/crud-angular7-master/angular.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2463" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app-repo/crud-angular7-master/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-ng-master/manage-readme-ng-version.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-ng-master/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-ng-master/app-repo/crud-angular7-master/e2e/src/app.po.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-ng-master/src/crud-angular7-master/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-ng-master/src/crud-angular7-master/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-ng-master/src/crud-angular7-master/src/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-ng-master/src/entrypoint.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-ng-master/src/Dockerfile.dev">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" selection-start-line="9" selection-end-line="17" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-ui/tslint.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-ui/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1188">
+          <caret line="44" column="46" selection-start-line="44" selection-start-column="46" selection-end-line="45" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dockerfile.dev">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-ui/src/app/features/highcharts/highcharts.component.scss">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-ui/src/app/components/navbar/navbar.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" selection-start-column="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="36" column="24" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-ui/angular.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-ui/src/app/app.component.scss">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-ui/src/styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-302">
+          <caret line="158" column="8" selection-start-line="158" selection-start-column="8" selection-end-line="158" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-ui/src/app/components/navbar/navbar.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.13408393" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
