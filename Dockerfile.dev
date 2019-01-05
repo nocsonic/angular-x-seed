@@ -22,3 +22,4 @@ RUN cd /app && ng build
 CMD ["npm", "start"]
 
 
+
