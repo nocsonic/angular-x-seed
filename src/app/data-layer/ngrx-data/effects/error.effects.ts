@@ -1,12 +1,11 @@
-import { Observable } from 'rxjs';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/switchMap';
-import 'rxjs/add/observable/of';
+import { Observable , of} from 'rxjs';
+import { map, switchMap  } from 'rxjs/operators';
 
+import { Action } from '@ngrx/store';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { Actions, Effect  } from '@ngrx/effects';
+import { Actions, Effect, ofType } from '@ngrx/effects';
 import { ErrorModel } from '../../../business-layer/models/error.model';
 
 import * as errorActions from '../actions/error.actions';
@@ -19,42 +18,44 @@ import * as usersessionActions from '../actions/usersession.actions';
 export class ErrorEffects {
 
 
- @Effect() catchAllRemoteError$ = this.actions$
-  .ofType(errorActions.ErrorTypes.REPORT_ERROR)
-  .map(action => action.payload)
-  .switchMap(payload => {
+constructor(
+    private actions$: Actions,
+    private router: Router
+
+) {  }
+
+ @Effect()
+  catchAllRemoteError$ = this.actions$.pipe(
+   ofType(errorActions.ErrorTypes.REPORT_ERROR),
+   map((action:errorActions.ReportError) => action.payload),
+   switchMap(payload => {
     let obs;
 
     switch(payload.action_type) {
 
      case profileActions.ProfileTypes.CHECK_USER_PROFILE_NAME_FAILURE:
       if(this.router.url.indexOf('register')>0) {
-        obs = Observable.of( new profileActions.CheckUserProfileNameFailure(<ErrorModel> payload));
+        obs = of( new profileActions.CheckUserProfileNameFailure(<ErrorModel> payload));
       }else {
-        obs = Observable.of(this.router.navigateByUrl('/error'));
+        obs = of(this.router.navigateByUrl('/error'));
       }
      break;
 
      case usersessionActions.UserSessionTypes.LOGIN_USER_FAILURE:
-       obs = Observable.of(new usersessionActions.UserLoginFailure(<ErrorModel> payload));
+       obs = of(new usersessionActions.UserLoginFailure(<ErrorModel> payload));
      break;
 
      default:{
-       obs = Observable.of(this.router.navigateByUrl('/error'));
+       obs = of(this.router.navigateByUrl('/error'));
      }
 
 
     }
     return obs;
-  });
+  })
+  );
 
 
-
-    constructor(
-        private actions$: Actions,
-        private router: Router
-
-    ) {  }
 
 
 }
