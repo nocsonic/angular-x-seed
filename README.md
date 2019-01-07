@@ -9,3 +9,8 @@ In app building with [/docker-ng](https://github.com/metal3d/docker-ng/blob/mast
 # to write in directory.
 $ docker run --rm -it --user $(id -u):$(id -g) -e APPNAME=crud-angular7-master -v $PWD/app-repo:/app metal3d/ng
 docker run --rm -it  --user $(id -u):$(id -g)  -v $PWD/crud-angular7-master:/app metal3d/ng  -p 4200:4200
+
+
+
+
+http://www.gistia.com/authentication-in-angular-with-ngrx-part-ii/
