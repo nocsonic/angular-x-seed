@@ -7,7 +7,7 @@ services:
     restart: always
     container_name: client-ui-container
     build:
-      context: ./client-ui
+      context: src
       dockerfile: ./Dockerfile.dev
     image: local/image-client-ui-dev:latest
     command: ["npm", "start"]
