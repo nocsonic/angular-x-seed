@@ -1,5 +1,5 @@
 import { Observable, of } from 'rxjs';
-import { map, switchMap, filter, withLatestFrom, tap} from 'rxjs/operators';
+import { map, switchMap, withLatestFrom} from 'rxjs/operators';
 
 import { Injectable, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
@@ -9,7 +9,6 @@ import * as errorActions from '../actions/error.actions';
 import * as profileActions from '../actions/profile.actions';
 import { UserServices } from '../../api-services';
 import * as fromRoot from '../reducers/index';
-import { UserModel } from "../../../../../../ws-node-demo/src/data-layer/models/UserModel";
 
 
 

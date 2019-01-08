@@ -11,7 +11,7 @@ export class ReportError implements Action {
 
 export class RemoveError implements Action {
   public readonly type = ErrorActionTypes.REMOVE_ERROR;
-  constructor(public payload: string) { }
+  constructor(public payload: ErrorModel) { }
 }
 
 export type Actions =

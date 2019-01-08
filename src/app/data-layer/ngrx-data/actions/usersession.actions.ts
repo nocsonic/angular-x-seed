@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { SessionModel, ErrorModel } from '../../../business-layer/models/index';
+import { SessionModel,LoginModel, ErrorModel } from '../../../business-layer/models/index';
 import * as  UserSessionActionType  from '../../../business-layer/shared-types/actions/usersession.action.types';
 
 
@@ -12,7 +12,7 @@ export class AppStartLoginClear implements Action {
 
 export class UserLoginAttempt implements Action {
   public readonly type = UserSessionActionType.LOGIN_USER_ATTEMPT;
-  constructor(public payload: SessionModel) {  }
+  constructor(public payload: LoginModel) {  }
 }
 
 
