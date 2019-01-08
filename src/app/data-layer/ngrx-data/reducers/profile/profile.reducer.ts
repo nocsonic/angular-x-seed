@@ -1,14 +1,17 @@
 import { createSelector } from 'reselect';
+import { createEntityAdapter, EntityAdapter, EntityState } from '@ngrx/entity';
 import { UserModel  } from '../../../../business-layer/models/user.model';
 import * as profileActions from '../../actions/profile.actions';
 import * as ProfileActionTypes from '../../../../business-layer/shared-types/actions/profile.action.types';
 
-export  interface State {
+export  interface State extends EntityState<UserModel>{
   ids: string[];
   entities: { [id: string]: UserModel };
   selectedProfileId: string | null;
   validUserName:string;
 }
+
+
 
 export const initialState: State = {
   ids: [],

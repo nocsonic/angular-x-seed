@@ -19,3 +19,5 @@ export const EDIT_USER_PROFILE_FAILURE = '[ProfileActions] update user Profile f
 export const REGISTER_USER_FAILURE = '[ProfileActions] user registration failed';
 export const REGISTER_USER_ATTEMPT = '[ProfileActions] user registration attempt';
 export const REGISTER_USER_SUCCESS = '[ProfileActions] user registration successful';
+
+
