@@ -1,5 +1,5 @@
 import { Observable, of } from 'rxjs';
-import { map, switchMap,filter,withLatestFrom, tap} from 'rxjs/operators';
+import { map, switchMap, filter, withLatestFrom, tap} from 'rxjs/operators';
 
 import { Injectable, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
@@ -9,7 +9,7 @@ import * as errorActions from '../actions/error.actions';
 import * as profileActions from '../actions/profile.actions';
 import { UserServices } from '../../api-services';
 import * as fromRoot from '../reducers/index';
-import {UserModel} from "../../../../../../ws-node-demo/src/data-layer/models/UserModel";
+import { UserModel } from "../../../../../../ws-node-demo/src/data-layer/models/UserModel";
 
 
 
@@ -42,9 +42,9 @@ export class ProfileEffects {
    ofType( profileActions.ProfileTypes.GET_USER_PROFILE_ATTEMPT ),
    withLatestFrom( this.store.select(fromRoot.getProfileEntities) ),
    map( ([ action, profileEntities]:
-     [profileActions.GetUserProfileAttempt, profileEntities]) =>
-    [ action.payload, profileEntities ] ),
-   switchMap(([username, profileEntities]) => {
+     [ profileActions.GetUserProfileAttempt, Object]) =>
+     [ action.payload , profileEntities ] ),
+   switchMap(([username, profileEntities]:[ string , Object ]) => {
     const existsInStore = Object.keys(profileEntities).filter(
                                entity=> {
                                             if(profileEntities[entity].username === username) {

@@ -24,7 +24,10 @@ export class UserServices {
 
 
   getUserByName(payload:string,
-                ErrorActionType:string, SpecificErrorType:string, SuccessType:string) {
+                ErrorActionType:string,
+                SpecificErrorType:string,
+                SuccessType:string) {
+
     let getParams: HttpParams = {
       auth: false,
       errorActionType: ErrorActionType,
@@ -34,6 +37,7 @@ export class UserServices {
       successActionType:SuccessType,
       uri: 'Users/username/'+payload
     };
+
     return this.httpWrapperService.get(getParams);
   }
 

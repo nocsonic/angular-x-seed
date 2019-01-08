@@ -1,5 +1,5 @@
 import { createSelector } from 'reselect';
-import { ActionReducer, Entity } from '@ngrx/store';
+import { ActionReducer } from '@ngrx/store';
 import * as fromRouter from '@ngrx/router-store';
 import { Config } from '../../../shared-utils/app-env/env.config';
 
