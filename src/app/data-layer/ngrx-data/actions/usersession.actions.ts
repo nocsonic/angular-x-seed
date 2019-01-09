@@ -1,49 +1,45 @@
 import { Action } from '@ngrx/store';
 import { SessionModel,LoginModel, ErrorModel } from '../../../business-layer/models/index';
-import * as  UserSessionActionType  from '../../../business-layer/shared-types/actions/usersession.action.types';
-
-
-
-export const UserSessionTypes = UserSessionActionType;
+import { UserSessionActionTypes } from "@app/business-layer/shared-types/actions";
 
 export class AppStartLoginClear implements Action {
-  public readonly type = UserSessionActionType.APP_START_CLEAR_LOGIN;
+  public readonly type = UserSessionActionTypes.APP_START_CLEAR_LOGIN;
 }
 
 export class UserLoginAttempt implements Action {
-  public readonly type = UserSessionActionType.LOGIN_USER_ATTEMPT;
+  public readonly type = UserSessionActionTypes.LOGIN_USER_ATTEMPT;
   constructor(public payload: LoginModel) {  }
 }
 
 
 export class UserLoginSuccess implements Action {
-  public readonly type =  UserSessionActionType.LOGIN_USER_SUCCESS;
+  public readonly type =  UserSessionActionTypes.LOGIN_USER_SUCCESS;
   constructor(public payload:any) {
   }
 }
 
 export class UserLoginFailure implements Action {
-  public readonly type =  UserSessionActionType.LOGIN_USER_FAILURE;
+  public readonly type =  UserSessionActionTypes.LOGIN_USER_FAILURE;
   constructor(public payload: ErrorModel) {}
 }
 
 
 
 export class UserLogoutAttempt implements Action {
-  public readonly  type =  UserSessionActionType.LOGOUT_USER_ATTEMPT;
+  public readonly  type =  UserSessionActionTypes.LOGOUT_USER_ATTEMPT;
 }
 
 export class UserLogoutSuccess implements Action {
-  public readonly  type =  UserSessionActionType.LOGOUT_USER_SUCCESS;
+  public readonly  type =  UserSessionActionTypes.LOGOUT_USER_SUCCESS;
 }
 
 export class UserLogoutFailure implements Action {
-  public readonly  type =  UserSessionActionType.LOGOUT_USER_FAILURE;
+  public readonly  type =  UserSessionActionTypes.LOGOUT_USER_FAILURE;
 }
 
 
 export class GetSessionUser implements Action {
-  public readonly type =  UserSessionActionType.GET_SESSION_USER_SUCCESS;
+  public readonly type =  UserSessionActionTypes.GET_SESSION_USER_SUCCESS;
   constructor(public payload: SessionModel) { }
 }
 

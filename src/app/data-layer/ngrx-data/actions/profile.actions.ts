@@ -1,10 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Action } from '@ngrx/store';
 import { UserModel, RegistrationModel, ErrorModel } from '../../../business-layer/models/index';
-import * as  ProfileActionTypes  from '../../../business-layer/shared-types/actions/profile.action.types';
+import { ProfileActionTypes } from "@app/business-layer/shared-types/actions";
 
-
-export const ProfileTypes = ProfileActionTypes;
 
 export class CheckUserProfileNameAttempt implements Action {
  public readonly type = ProfileActionTypes.CHECK_USER_PROFILE_NAME_ATTEMPT;
