@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { HttpWrapperService } from './http.wrapper.service';
 import { HttpParams } from './interfaces/httpParams.model';
+import {LoginModel} from "@app/business-layer/models";
 
 @Injectable()
 export class UserServices {
@@ -41,7 +42,7 @@ export class UserServices {
     return this.httpWrapperService.get(getParams);
   }
 
-  loginUser(payload: {username: string, password: string},
+  loginUser(payload:LoginModel,
             ErrorActionType:string, SpecificErrorType:string, SuccessType:string) {
     let postParams: HttpParams = {
       auth: false,

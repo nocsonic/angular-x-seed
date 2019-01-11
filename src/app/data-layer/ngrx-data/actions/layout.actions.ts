@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import * as LayoutActionTypes from '../../../business-layer/shared-types/actions/layout.action.types';
+import {LayoutActionTypes} from "@app/business-layer/shared-types/actions";
 
 export class ShowLoginDialog implements Action {
   public readonly type = LayoutActionTypes.SHOW_LOGIN_DIALOG;

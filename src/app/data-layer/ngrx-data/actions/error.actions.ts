@@ -1,8 +1,6 @@
 import { Action } from '@ngrx/store';
-import { ErrorModel } from '../../../business-layer/models/error.model';
-import * as ErrorActionTypes from '../../../business-layer/shared-types/actions/error.action.types';
-
-export const ErrorTypes = ErrorActionTypes;
+import { ErrorModel } from "@app/business-layer/models";
+import { ErrorActionTypes } from "@app/business-layer/shared-types/actions";
 
 export class ReportError implements Action {
   public readonly type = ErrorActionTypes.REPORT_ERROR;
@@ -11,10 +9,10 @@ export class ReportError implements Action {
 
 export class RemoveError implements Action {
   public readonly type = ErrorActionTypes.REMOVE_ERROR;
-  constructor(public payload: string) { }
+  constructor(public payload: ErrorModel) { }
 }
 
 export type Actions =
-     ReportError
+      ReportError
       | RemoveError;
 

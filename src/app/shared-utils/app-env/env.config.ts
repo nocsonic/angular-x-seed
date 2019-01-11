@@ -1,4 +1,4 @@
-import { EnvConfig } from '../../../../../tools/env/env-config.interface';
+import { environment } from '../../../environments/environment';
 
-export const Config: EnvConfig = JSON.parse('<%= ENV_CONFIG %>');
+export const Config = environment.envName;
 

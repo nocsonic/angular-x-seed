@@ -1,15 +1,14 @@
 import { ModuleWithProviders,  NgModule, Optional, SkipSelf} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
-import { HttpWrapperService } from '../api-services/http.wrapper.service';
+import { HttpWrapperService } from '../api-services';
 import { UserServices } from '../api-services/user.service';
 
 /*
      ngrx base library
  */
-import { RouterStoreModule } from '@ngrx/router-store';
+import { StoreRouterConnectingModule, routerReducer  } from '@ngrx/router-store';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { reducer } from  './reducers/index';
@@ -31,14 +30,16 @@ import { UsersessionGuard, DialogStateGuard } from './guards/index';
 
 @NgModule({
     imports: [ CommonModule,
-               HttpModule,
                RouterModule,
-               StoreModule.provideStore(reducer),
-               RouterStoreModule.connectRouter(),
-               EffectsModule.run(ErrorEffects),
-               EffectsModule.run(ProfileEffects),
-               EffectsModule.run(UserSessionEffects) ],
-    exports: [],
+               StoreModule.forRoot({
+                                  router:reducer
+               }),
+               StoreRouterConnectingModule.forRoot(),
+               EffectsModule.forRoot([
+                 ErrorEffects,
+                 ProfileEffects,
+                 UserSessionEffects
+                 ]),
     providers: [ UsersessionGuard,
                  DialogStateGuard,
                  HttpWrapperService,
