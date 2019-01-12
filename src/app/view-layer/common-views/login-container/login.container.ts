@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
-import { MdDialogRef } from '@angular/material';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
 import { Subscription } from 'rxjs/Subscription';
 import { SessionModel } from '../../../business-layer/models/session.model';
 import { BrokerDispatcherService } from '../../../business-layer/pubsub-broker/services/broker.dispatcher.service';
@@ -23,7 +23,7 @@ export class LoginContainerComponent implements OnInit,  OnDestroy {
    brokerRef:any;
 
   constructor(  private router: Router,
-                public  dialogRef:MdDialogRef<any>,
+                public  dialogRef:MatDialogRef<any>,
                 private bDS:BrokerDispatcherService) {
 
           var brokerResponse:BrokerResponse = this.bDS.dispatchBrokerSelector(BrokerList.BROKER_LOGIN_STORE);

@@ -11,7 +11,7 @@ import { UserServices } from '../api-services/user.service';
 import { StoreRouterConnectingModule, routerReducer  } from '@ngrx/router-store';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
-import { reducer } from  './reducers/index';
+import { reducers } from  './reducers/index';
 
 
 /*
@@ -29,10 +29,10 @@ import { ProfileEffects } from './effects/profile.effects';
 import { UsersessionGuard, DialogStateGuard } from './guards/index';
 
 @NgModule({
-    imports: [ CommonModule,
+    imports:  [ CommonModule,
                RouterModule,
                StoreModule.forRoot({
-                                  router:reducer
+                                  router:reducers.router
                }),
                StoreRouterConnectingModule.forRoot(),
                EffectsModule.forRoot([
@@ -40,6 +40,7 @@ import { UsersessionGuard, DialogStateGuard } from './guards/index';
                  ProfileEffects,
                  UserSessionEffects
                  ]),
+               ],
     providers: [ UsersessionGuard,
                  DialogStateGuard,
                  HttpWrapperService,

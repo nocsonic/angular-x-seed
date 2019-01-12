@@ -1,17 +1,14 @@
-import { createSelector } from 'reselect';
-import { ActionReducer } from '@ngrx/store';
+import {
+  ActionReducer,
+  ActionReducerMap,
+  createFeatureSelector,
+  createSelector,
+  MetaReducer
+} from '@ngrx/store';
+
 import * as fromRouter from '@ngrx/router-store';
 import { Config } from '../../../shared-utils/app-env/env.config';
 
-/**
- * The compose function is one of our most handy tools. In basic terms, you give
- * it any number of functions and it returns a function. This new function
- * takes a value and chains it through every composed function, returning
- * the output.
- *
- * More: https://drboolean.gitbooks.io/mostly-adequate-guide/content/ch5.html
- */
-import { compose } from '@ngrx/core/compose';
 
 /**
  * storeFreeze prevents state from being mutated. When mutation occurs, an
@@ -42,7 +39,9 @@ import * as fromLayouts from './layout/layout.reducer';
 import * as fromProfiles from './profile/profile.reducer';
 import * as fromUsersession from './usersession/usersession.reducer';
 
-
+export const metaReducers: MetaReducer<State>[] = Config.envName !== "PROD"
+  ? [storeFreeze]
+  : [];
 /**
  * As mentioned, we treat each reducer like a table in a database. This means
  * our top level state interface is just a map of keys to inner state types.
@@ -52,7 +51,7 @@ export interface State {
   layouts: fromLayouts.State;
   profiles: fromProfiles.State;
   usersession: fromUsersession.State;
-  router: fromRouter.RouterState;
+  router: fromRouter.RouterReducerState;
 }
 
 
@@ -63,7 +62,8 @@ export interface State {
  * wrapping that in storeLogger. Remember that compose applies
  * the result from right to left.
  */
-const reducers = {
+
+export const reducers: ActionReducerMap<State> ={
   errors: fromErrors.reducer,
   layouts: fromLayouts.reducer,
   profiles: fromProfiles.reducer,
@@ -71,16 +71,8 @@ const reducers = {
   router: fromRouter.routerReducer
 };
 
-const developmentReducer: ActionReducer<State> = compose(storeFreeze, combineReducers)(reducers);
-const productionReducer: ActionReducer<State> = combineReducers(reducers);
 
-export function reducer(state: any, action: any) {
-  if (Config.ENV === 'PROD') {
-    return productionReducer(state, action);
-  } else {
-    return developmentReducer(state, action);
-  }
-}
+
 
 
 /**
@@ -119,7 +111,6 @@ export const hasLoggedInUser = createSelector(getToken, (token) => {
 });
 
 
-
 /**
  * Just like with the books selectors, we also have to compose the search
  * reducer's and collection reducer's selectors.
@@ -150,3 +141,8 @@ export const getLayoutState = (state: State) => state.layouts;
 export const getShowLoginDialog = createSelector(getLayoutState, fromLayouts.getShowLoginDialog);
 
 export const getRequestedURL = createSelector(getLayoutState, fromLayouts.getRequestedURL);
+
+
+export const getRouterState = createFeatureSelector<
+  fromRouter.RouterReducerState
+>('router');

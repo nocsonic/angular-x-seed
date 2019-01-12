@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { RouterModule } from '@angular/router';
 import { MastheadComponent } from './masthead.component';
-import { MaterialModule } from '@angular/material';
+import { MaterialModule } from '../material';
 import { DialogsModule } from '../dialog-container/dialog.module';
 import { DialogsService } from '../dialog-container/dialog.service';
 

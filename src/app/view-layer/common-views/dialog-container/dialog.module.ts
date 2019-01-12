@@ -1,5 +1,5 @@
 import { DialogsService } from './dialog.service';
-import { MaterialModule } from '@angular/material';
+import { MaterialModule } from '../material';
 import { FormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { NgModule } from '@angular/core';

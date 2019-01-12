@@ -1,7 +1,11 @@
 import { createSelector } from 'reselect';
-import { ErrorModel  } from '../../../../business-layer/models/error.model';
-import * as errorActions from '../../actions/error.actions';
-import * as ErrorActionTypes from '../../../../business-layer/shared-types/actions/error.action.types';
+import { ErrorModel } from "@app/business-layer/models";
+import {
+    ErrorActionTypes
+    } from "@app/business-layer/shared-types/actions";
+import {
+    ErrorActions
+    } from "@app/data-layer/ngrx-data/actions";
 
 export  interface State {
   ids: string[];
@@ -17,7 +21,7 @@ export const initialState: State = {
 
 
 
-export function reducer(state = initialState, action: errorActions.Actions): State {
+export function reducer(state = initialState, action: ErrorActions.Actions): State {
   switch (action.type) {
     case ErrorActionTypes.REPORT_ERROR: {
           let errorObj = Object.assign({},action.payload, {id:(Date.now()).toString()});
@@ -29,7 +33,7 @@ export function reducer(state = initialState, action: errorActions.Actions): Sta
           };
     }
     case ErrorActionTypes.REMOVE_ERROR: {
-          const errorId:string = <string>action.payload;
+          const errorId:string = <string>action.payload.message;
 
           if (state.ids.indexOf(errorId) > -1) {
              return state;

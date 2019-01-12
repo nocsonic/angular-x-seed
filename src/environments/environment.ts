@@ -8,6 +8,9 @@ const packageJson = require('../../package.json');
 export const environment = {
   appName: 'NocSonic',
   envName: 'DEV',
+  API: 'api',
+  HOST: 'http://localhost',
+  PORT: '80',
   production: false,
   test: false,
   i18nPrefix: '',

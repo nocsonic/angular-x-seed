@@ -6,7 +6,7 @@ import {
   RouterStateSerializer
 } from '@ngrx/router-store';
 import {createSelector} from '@ngrx/store';
-import { getRouteState } from '../index';
+import { getRouterState } from  "@app/data-layer/ngrx-data/reducers";
 
 export interface RouterStateUrl {
   url: string;
@@ -35,7 +35,7 @@ export class CustomSerializer implements RouterStateSerializer<RouterStateUrl> {
   }
 }
 export const getQueryParams = createSelector(
-  getRouteState,
+  getRouterState,
   (routeState: any) =>
     routeState && routeState.state ? routeState.state.queryParams : null
 );

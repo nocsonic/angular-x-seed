@@ -1,5 +1,5 @@
 import { NgModule, } from '@angular/core';
-import { HttpModule } from '@angular/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { APP_BASE_HREF, CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -39,7 +39,7 @@ import { AppStageRoutingModule } from './app.stage.routing.module';
              CommonModule,
              BrowserModule,
              BrowserAnimationsModule,
-             HttpModule,
+             HttpClientModule,
              NGRxDataModule.forRoot(),
              PubSubBrokerModule.forRoot(),
              BrokerageModule.forRoot(),
