@@ -12,7 +12,6 @@ import {
     } from "@app/business-layer/shared-types/actions";
 import {
     ProfileActions,
-    ErrorActions
     } from "@app/data-layer/ngrx-data/actions";
 
 import { UserServices } from '../../api-services';

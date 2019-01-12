@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { MaterialModule } from '@angular/material';
+import { MaterialModule } from '../../common-views/material';
 import { RouterModule } from '@angular/router';
 import { NotfoundPageRoutingModule } from './notfound.page.routing.module';
 import { NotfoundPageComponent } from './notfound.page.component';

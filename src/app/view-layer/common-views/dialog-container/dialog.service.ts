@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs';
 import { Injectable, ComponentFactoryResolver, ComponentRef, Inject, ViewContainerRef, ElementRef } from '@angular/core';
-import { MdDialogRef, MdDialog, MdDialogConfig } from '@angular/material';
+import { MatDialogConfig, MatDialogRef, MatDialog } from '@angular/material';
 import { DialogContainerComponent } from './dialog.container';
 import { LoginContainerComponent } from '../login-container/login.container';
 import { BrokerDispatcherService } from '../../../business-layer/pubsub-broker/services/broker.dispatcher.service';
@@ -11,12 +11,12 @@ import { BrokerList } from '../../../business-layer/brokerage/ngrx-stubs/brokerl
 @Injectable()
 export class DialogsService {
     layoutState$:Observable<any>;
-    dialogRef:MdDialogRef<DialogContainerComponent>;
+    dialogRef:MatDialogRef<DialogContainerComponent>;
     pubSubSubscription = null;
     brokerRef:any;
 
     constructor(  private bDS:BrokerDispatcherService,
-                  private dialog: MdDialog) {
+                  private dialog: MatDialog) {
                       let brokerResponse:BrokerResponse = this.bDS.dispatchBrokerSelector( BrokerList.BROKER_DIALOG_STORE);
                       this.brokerRef = brokerResponse.brokerRequested;
                       this.layoutState$ = this.brokerRef.storeObs.layoutState$;

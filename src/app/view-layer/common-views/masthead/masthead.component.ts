@@ -5,9 +5,9 @@ import { Location } from '@angular/common';
 import { Observable } from 'rxjs';
 import { Subscription } from 'rxjs/Subscription';
 import { DialogsService } from '../dialog-container/dialog.service';
-import { BrokerDispatcherService } from '../../../business-layer/pubsub-broker/services/broker.dispatcher.service';
-import { BrokerResponse } from "../../../business-layer/pubsub-broker/models/broker.response.model";
-import { BrokerList } from '../../../business-layer/brokerage/ngrx-stubs/brokerlist';
+import { BrokerDispatcherService } from "@app/business-layer/pubsub-broker/services/broker.dispatcher.service";
+import { BrokerResponse } from "@app/business-layer/pubsub-broker/models/broker.response.model";
+import { BrokerList } from "@app/business-layer/brokerage/ngrx-stubs/brokerlist";
 
 
 

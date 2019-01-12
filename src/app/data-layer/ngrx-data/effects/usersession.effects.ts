@@ -4,8 +4,14 @@ import { Actions, Effect,ofType } from '@ngrx/effects';
 
 import { Router } from '@angular/router';
 import { Injectable } from '@angular/core';
-import * as usersessionActions from '../actions/usersession.actions';
-import * as errorActions from '../actions/error.actions';
+import {
+    UserSessionActionTypes,
+    ErrorActionTypes
+    } from "@app/business-layer/shared-types/actions";
+import {
+    UserSessionActions,
+    ErrorActions
+    } from "@app/data-layer/ngrx-data/actions";
 import { UserServices } from '../../api-services';
 import {ErrorModel, LoginModel} from "@app/business-layer/models";
 
@@ -14,37 +20,37 @@ import {ErrorModel, LoginModel} from "@app/business-layer/models";
 @Injectable()
 export class UserSessionEffects {
 
-  @Effect()  startAppClearUser$  = of(new usersessionActions.AppStartLoginClear());
+  @Effect()  startAppClearUser$  = of(new UserSessionActions.AppStartLoginClear());
 
 
   @Effect() loginUser$ = this.actions$.pipe(
-   ofType(usersessionActions.UserSessionTypes.LOGIN_USER_ATTEMPT),
-   map((action:usersessionActions.UserLoginAttempt) => action.payload),
+   ofType(UserSessionActionTypes.LOGIN_USER_ATTEMPT),
+   map((action:UserSessionActions.UserLoginAttempt) => action.payload),
    switchMap((payload:LoginModel)=> this.userServices.loginUser( payload,
-      errorActions.ErrorTypes.REPORT_ERROR,
-      usersessionActions.UserSessionTypes.LOGIN_USER_FAILURE,
-      usersessionActions.UserSessionTypes.LOGIN_USER_SUCCESS))
+      ErrorActionTypes.REPORT_ERROR,
+      UserSessionActionTypes.LOGIN_USER_FAILURE,
+      UserSessionActionTypes.LOGIN_USER_SUCCESS))
   );
 
   @Effect() logoutUser$  = this.actions$.pipe(
-   ofType(usersessionActions.UserSessionTypes.LOGOUT_USER_ATTEMPT),
+   ofType(UserSessionActionTypes.LOGOUT_USER_ATTEMPT),
    map(action => this.userServices.logoutUser(
-    errorActions.ErrorTypes.REPORT_ERROR,
-    usersessionActions.UserSessionTypes.LOGOUT_USER_FAILURE,
-    usersessionActions.UserSessionTypes.LOGOUT_USER_SUCCESS))
+    ErrorActionTypes.REPORT_ERROR,
+    UserSessionActionTypes.LOGOUT_USER_FAILURE,
+    UserSessionActionTypes.LOGOUT_USER_SUCCESS))
   );
 
 
   @Effect() logoutUserSuccess$  = this.actions$.pipe(
-    ofType(usersessionActions.UserSessionTypes.LOGOUT_USER_SUCCESS),
+    ofType(UserSessionActionTypes.LOGOUT_USER_SUCCESS),
     map(action => of(this.router.navigateByUrl('/')))
     );
 
 
  @Effect() removeErrorModleCheckUserFailure$ = this.actions$.pipe(
-   ofType(usersessionActions.UserSessionTypes.LOGIN_USER_FAILURE),
-   map((action:usersessionActions.UserLoginFailure) => action.payload),
-   switchMap((payload:ErrorModel) => of(new errorActions.RemoveError(payload)))
+   ofType(UserSessionActionTypes.LOGIN_USER_FAILURE),
+   map((action:UserSessionActions.UserLoginFailure) => action.payload),
+   switchMap((payload:ErrorModel) => of(new ErrorActions.RemoveError(payload)))
    );
 
   constructor(
