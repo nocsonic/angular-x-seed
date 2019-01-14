@@ -1,23 +1,23 @@
  <div fxFlex fxLayout="row"  fxLayoutAlign="center center">
-        <md-card class="reg-card" fxFlex fxLayout="column"  fxLayoutAlign="center center">
-           <md-card-header>
-              <md-card-title class="reg-card-title">
+        <mat-card class="reg-card" fxFlex fxLayout="column"  fxLayoutAlign="center center">
+           <mat-card-header>
+              <mat-card-title class="reg-card-title">
                     <h1> Sign Up:</h1>
-              </md-card-title>
-           </md-card-header>
-           <md-card-content >
+              </mat-card-title>
+           </mat-card-header>
+           <mat-card-content >
               <form novalidate (ngSubmit)="onSubmit(newUser)"  [formGroup]="newUser" fxFlex fxLayout="column"  fxLayoutAlign="center center">
                   <div class="reg-new-user" formGroupName="name">
-                      <md-input-container class="reg-input-container">
-                          <input mdInput
+                      <mat-form-field class="reg-input-container">
+                          <input matInput
                                  autofocus
                                  type="text"
                                  id="username"
                                  (focusout)="onUserNameOutFocused()"
                                  (keyup)="onUserNameKeyedUp()"
                                  formControlName="username">
-                          <md-placeholder class="reg-placeholder-label">Create a Username</md-placeholder>
-                      </md-input-container>
+                          <mat-placeholder class="reg-placeholder-label">Create a Username</mat-placeholder>
+                      </mat-form-field>
                       <control-messages [control]="newUser.controls.name.controls.username"></control-messages>
                       <div class="error" *ngIf="userNameAttempt && !validUserName">
                               This username is already in use!
@@ -25,48 +25,48 @@
                       <br>
                   </div>
                     <div class="reg-new-user" formGroupName="user">
-                          <md-input-container #pwContainer class="reg-input-container">
-                              <input mdInput
+                          <mat-form-field #pwContainer class="reg-input-container">
+                              <input matInput
                                      #password
                                      id="password"
                                      name="password"
                                      type="text"
                                      formControlName="password">
-                              <md-placeholder class="reg-placeholder-label">Create a Password</md-placeholder>
-                          </md-input-container>
+                              <mat-placeholder class="reg-placeholder-label">Create a Password</mat-placeholder>
+                          </mat-form-field>
                           <control-messages [control]="newUser.controls.user.controls.password"></control-messages>
                           <br>
-                          <md-input-container class="reg-input-container">
-                              <input  mdInput
+                          <mat-form-field class="reg-input-container">
+                              <input  matInput
                                       type="text"
                                       formControlName="firstname">
-                              <md-placeholder class="reg-placeholder-label">Your first name</md-placeholder>
-                          </md-input-container>
+                              <mat-placeholder class="reg-placeholder-label">Your first name</mat-placeholder>
+                          </mat-form-field>
                           <control-messages [control]="newUser.controls.user.controls.firstname"></control-messages>
                           <br>
-                          <md-input-container class="reg-input-container">
-                              <input  mdInput
+                          <mat-form-field class="reg-input-container">
+                              <input  matInput
                                       type="text"
                                       formControlName="lastname">
-                              <md-placeholder class="reg-placeholder-label">Your last name</md-placeholder>
-                          </md-input-container>
+                              <mat-placeholder class="reg-placeholder-label">Your last name</mat-placeholder>
+                          </mat-form-field>
                           <control-messages [control]="newUser.controls.user.controls.lastname"></control-messages>
                     </div>
                     <div class="reg-new-user" formGroupName="account">
-                          <md-input-container class="reg-input-container">
-                              <input  mdInput
+                          <mat-form-field class="reg-input-container">
+                              <input  matInput
                                       type="text"
                                       formControlName="email">
-                              <md-placeholder class="reg-placeholder-label">Your email address</md-placeholder>
-                          </md-input-container>
+                              <mat-placeholder class="reg-placeholder-label">Your email address</mat-placeholder>
+                          </mat-form-field>
                           <control-messages [control]="newUser.controls.account.controls.email"></control-messages>
                           <br>
-                          <md-input-container class="reg-input-container">
-                              <input  mdInput
+                          <mat-form-field class="reg-input-container">
+                              <input  matInput
                                       type="text"
                                       formControlName="confirm">
-                              <md-placeholder class="reg-placeholder-label">Confirm your email address</md-placeholder>
-                          </md-input-container>
+                              <mat-placeholder class="reg-placeholder-label">Confirm your email address</mat-placeholder>
+                          </mat-form-field>
                           <control-messages [control]="newUser.controls.account.controls.confirm"></control-messages>
                           <div class="error" *ngIf="newUser.get('account').touched && newUser.get('account').hasError('nomatch')">
                               Email addresses must match
@@ -77,9 +77,9 @@
                     <br>
                     <br>
                   <div>
-                     <button md-raised-button class="reg-btn" type="submit" [disabled]="((!validUserName) || (!newUser.valid))">Sign up</button>
+                     <button mat-raised-button class="reg-btn" type="submit" [disabled]="((!validUserName) || (!newUser.valid))">Sign up</button>
                   </div>
               </form>
-            </md-card-content>
-       </md-card>
+            </mat-card-content>
+       </mat-card>
  </div>

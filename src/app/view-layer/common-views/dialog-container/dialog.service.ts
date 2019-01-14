@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs';
 import { Injectable, ComponentFactoryResolver, ComponentRef, Inject, ViewContainerRef, ElementRef } from '@angular/core';
-import { MatDialogConfig, MatDialogRef, MatDialog } from '@angular/material';
+import {  MatDialogConfig, MatDialogRef, MatDialog } from '@angular/material';
 import { DialogContainerComponent } from './dialog.container';
 import { LoginContainerComponent } from '../login-container/login.container';
 import { BrokerDispatcherService } from '../../../business-layer/pubsub-broker/services/broker.dispatcher.service';

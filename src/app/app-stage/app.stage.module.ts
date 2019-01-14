@@ -50,11 +50,8 @@ import { AppStageRoutingModule } from './app.stage.routing.module';
              FlexLayoutModule
            ],
   providers: [
-    NGRxBrokerRegistrationService,
-   {
-    provide: APP_BASE_HREF,
-    useValue: '<%= APP_BASE %>'
-   }],
+    NGRxBrokerRegistrationService
+    ],
   bootstrap: [ AppStageComponent ]
 
 })

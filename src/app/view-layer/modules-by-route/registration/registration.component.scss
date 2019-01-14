@@ -1,5 +1,5 @@
 
-@import '../../../../scss/vendor';
+@import '../../../../scss/styles-variables';
 
 :host {
     display:flex;
@@ -47,7 +47,7 @@
    background: $soil-color;
 }
 
-.reg-card md-card-header{
+.reg-card mat-card-header{
   height:50px;
   margin-bottom:25px;
 }

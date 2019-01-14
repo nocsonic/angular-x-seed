@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MaterialModule } from '../material';
+import { MaterialModule } from '../../common-views/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -25,5 +25,6 @@ import { RegistrationRoutingModule } from './registration.routing.module';
                   ControlMessagesComponent],
   exports: [RegistrationComponent]
 })
+
 
 export class RegistrationModule { }

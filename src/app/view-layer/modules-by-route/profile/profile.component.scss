@@ -1,5 +1,5 @@
 
-@import '../../../../scss/vendor';
+@import '../../../../scss/styles-variables';
 
 :host {
     display:flex;
@@ -25,7 +25,7 @@
   height:80px;
 }
 
-md-card-title{
+mat-card-title{
   padding-bottom:20px;
 }
 
@@ -37,12 +37,12 @@ md-card-title{
    font-family: $font-family-roboto;
 }
 
-md-list-item{
+mat-list-item{
   padding-top:20px;
   padding-bottom:10px;
 }
 
-md-list-item h3.profile-item-label{
+mat-list-item h3.profile-item-label{
    font-size:1.75em;
    font-weight: 100;
    color :lighten($soil-color, 6%);

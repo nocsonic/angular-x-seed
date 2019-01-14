@@ -8,9 +8,8 @@ import {
   MatCardModule,
   MatCheckboxModule,
   MatDatepickerModule,
-  MatDialogConfig,
   MatDialogModule,
-  MatDialogRef,
+  MatFormFieldModule,
   MatIconModule,
   MatInputModule,
   MatListModule,
@@ -22,6 +21,7 @@ import {
   MatSnackBarModule,
   MatTabsModule,
   MatToolbarModule,
+  MatDialog
 } from '@angular/material';
 
 @NgModule({
@@ -30,9 +30,8 @@ import {
     MatCardModule,
     MatCheckboxModule,
     MatDatepickerModule,
-    MatDialogConfig,
     MatDialogModule,
-    MatDialogRef,
+    MatFormFieldModule,
     MatIconModule,
     MatInputModule,
     MatListModule,
@@ -51,9 +50,8 @@ import {
     MatCardModule,
     MatCheckboxModule,
     MatDatepickerModule,
-    MatDialogConfig,
     MatDialogModule,
-    MatDialogRef,
+    MatFormFieldModule,
     MatIconModule,
     MatInputModule,
     MatListModule,

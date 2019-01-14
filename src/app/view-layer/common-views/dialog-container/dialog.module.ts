@@ -12,7 +12,7 @@ import { LoginContainerComponent } from '../login-container/login.container';
     imports: [
         FormsModule,
         FlexLayoutModule,
-        MaterialModule
+        MaterialModule,
     ],
     exports: [
         FlexLayoutModule,

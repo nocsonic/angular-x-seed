@@ -15,7 +15,7 @@ import { BrokerList } from "@app/business-layer/brokerage/ngrx-stubs/brokerlist"
     moduleId: module.id,
     selector: 'mast-head',
     templateUrl: 'masthead.component.html',
-    styleUrls: ['masthead.component.css']
+    styleUrls: ['masthead.component.scss']
 })
 export class MastheadComponent implements OnInit, OnDestroy {
 

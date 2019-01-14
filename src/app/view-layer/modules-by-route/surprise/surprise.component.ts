@@ -7,7 +7,7 @@ import 'rxjs/add/operator/switchMap';
     moduleId: module.id,
     selector: 'sd-surprise',
     templateUrl: 'surprise.component.html',
-    styleUrls: ['surprise.component.css'],
+    styleUrls: ['surprise.component.scss'],
 })
 
 

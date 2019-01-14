@@ -1,6 +1,6 @@
 import { createSelector } from 'reselect';
 import { createEntityAdapter, EntityAdapter, EntityState } from '@ngrx/entity';
-import { UserModel  } from '../../../../business-layer/models/user.model';
+import { UserModel  } from '../../../../business-layer/models';
 import * as profileActions from '../../actions/profile.actions';
 import * as ProfileActionTypes from '../../../../business-layer/shared-types/actions/profile.action.types';
 
@@ -86,7 +86,10 @@ export function reducer(state = initialState, action: profileActions.Actions): S
  * use-case.
  */
 
-export const getEntities = (state: State) => state.entities;
+export const getEntities = (state: State) => {
+    console.log('getUnities state --', state)
+    return state.entities;
+};
 
 export const getIds = (state: State) => state.ids;
 

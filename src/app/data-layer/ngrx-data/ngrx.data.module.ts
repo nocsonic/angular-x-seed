@@ -31,7 +31,7 @@ import { UsersessionGuard, DialogStateGuard } from './guards/index';
 @NgModule({
     imports:  [ CommonModule,
                RouterModule,
-               StoreModule.forRoot({
+               StoreModule.forRoot( reducers, {
                                   router:reducers.router
                }),
                StoreRouterConnectingModule.forRoot(),

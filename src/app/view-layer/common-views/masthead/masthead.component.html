@@ -1,10 +1,10 @@
 <!-- ngrx smart-container-->
 <div class="flex-container nav-container" fxFlexFill>
-    <md-toolbar class="flex-item md-mainNav-theme fixed-masthead-nav">
+    <mat-toolbar class="flex-item mat-mainNav-theme fixed-masthead-nav">
         <div fxLayout="row"  fxFlex="100">
             <div fxLayout="column" fxFlex="25">
                 <a  class="nav-link"
-                    md-button
+                    mat-button
                     routerLink='/'
                     routerLinkActive="active-btn"
                     [routerLinkActiveOptions]="{exact:true}">
@@ -15,7 +15,7 @@
                 <nav  fxLayout="row" fxLayoutAlign="end center">
                     <a  *ngIf='(hasLoggedInUser$  | async) == 1'
                         class="nav-link"
-                        md-button
+                        mat-button
                         routerLink='/surprise'
                         routerLinkActive="active-btn">
                         Surprise
@@ -23,7 +23,7 @@
                     </a>
                     <a  *ngIf='(hasLoggedInUser$  | async) == 1'
                         class="nav-link"
-                        md-button
+                        mat-button
                         routerLink='{{ myName }}'
                         routerLinkActive="active-btn"
                         [routerLinkActiveOptions]="{exact:true}">
@@ -31,17 +31,17 @@
                     </a>
                     <button  *ngIf='(hasLoggedInUser$  | async) == 0'
                              fxFlex="20%"
-                             md-button
+                             mat-button
                              (click)="requestLogin()">Log In
                     </button>
                     <button  *ngIf='(hasLoggedInUser$  | async) == 1'
                              fxFlex="20%"
-                             md-button
+                             mat-button
                              class="flex-item login-button"
                              (click)="requestLogout()">Log Out
                     </button>
                 </nav>
             </div>
         </div>
-    </md-toolbar>
+    </mat-toolbar>
 </div>

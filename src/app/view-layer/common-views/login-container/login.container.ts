@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
+import { MAT_DIALOG_DATA, MatDialogRef, MatFormFieldControl, MatSelectModule,  MatInputModule} from '@angular/material';
 import { Subscription } from 'rxjs/Subscription';
 import { SessionModel } from '../../../business-layer/models/session.model';
 import { BrokerDispatcherService } from '../../../business-layer/pubsub-broker/services/broker.dispatcher.service';
@@ -11,7 +11,8 @@ import { BrokerList } from '../../../business-layer/brokerage/ngrx-stubs/brokerl
   moduleId: module.id,
   selector: 'login-container',
   templateUrl: 'login.container.html',
-  styleUrls: ['login.container.css']
+  //styleUrls: ['login.container.scss'],
+  providers: [{provide: MatFormFieldControl}],
 })
 export class LoginContainerComponent implements OnInit,  OnDestroy {
   layoutSub:Subscription;

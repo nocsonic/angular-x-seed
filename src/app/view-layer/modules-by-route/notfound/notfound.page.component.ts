@@ -5,7 +5,7 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   moduleId: module.id,
   selector: 'notfound-page',
   templateUrl: 'notfound.page.component.html',
-  styleUrls: ['notfound.page.component.css'],
+  styleUrls: ['notfound.page.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NotfoundPageComponent { }

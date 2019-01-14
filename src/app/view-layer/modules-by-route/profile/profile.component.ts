@@ -14,7 +14,7 @@ import 'rxjs/add/operator/let';
     moduleId: module.id,
     selector: 'sd-profile',
     templateUrl: './profile.component.html',
-    styleUrls: ['./profile.component.css'],
+    styleUrls: ['./profile.component.scss'],
 })
 
 

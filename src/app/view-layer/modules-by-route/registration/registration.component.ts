@@ -16,7 +16,7 @@ import { Subscription } from 'rxjs';
     moduleId: module.id,
     selector: 'sd-registration',
     templateUrl: './registration.component.html',
-    styleUrls: ['./registration.component.css'],
+    styleUrls: ['./registration.component.scss'],
 })
 
 
