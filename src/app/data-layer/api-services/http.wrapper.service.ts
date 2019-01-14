@@ -98,7 +98,7 @@ export class HttpWrapperService {
 
 
   private configRequest(uri: string, authRequired: boolean = false): {apiUrl: string, headerOptions:any} {
-    let apiUrl = `${Config.HOST}/${Config.API}/${uri}`;
+    let apiUrl = `${Config.HOST}:${Config.PORT}/${Config.API}/${uri}`;
     let headerOptions = { header: authRequired ?
         new HttpHeaders({
         'Content-Type': 'application/json',

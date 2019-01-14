@@ -1,7 +1,6 @@
 @import '../../scss/styles-variables';
-@import '~@angular/material/theming';
 
-@mixin anms-app-component-theme($theme) {
+@mixin ns-app-component-theme($theme) {
   $primary: map-get($theme, primary);
   $accent: map-get($theme, accent);
   $warn: map-get($theme, warn);

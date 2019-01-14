@@ -11,8 +11,7 @@ import { BrokerList } from '../../../business-layer/brokerage/ngrx-stubs/brokerl
   moduleId: module.id,
   selector: 'login-container',
   templateUrl: 'login.container.html',
-  //styleUrls: ['login.container.scss'],
-  providers: [{provide: MatFormFieldControl}],
+  styleUrls: ['login.container.scss'],
 })
 export class LoginContainerComponent implements OnInit,  OnDestroy {
   layoutSub:Subscription;

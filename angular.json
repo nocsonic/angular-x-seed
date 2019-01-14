@@ -3,11 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-ngrx-material-starter": {
+    "nocsonic-starter": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
-      "prefix": "anms",
+      "prefix": "ns",
       "schematics": {
         "@schematics/angular:component": {
           "changeDetection": "OnPush"
@@ -93,11 +93,11 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-ngrx-material-starter:build"
+            "browserTarget": "nocsonic-starter:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-ngrx-material-starter:build:production"
+              "browserTarget": "nocsonic-starter:build:production"
             }
           }
         },
@@ -158,7 +158,7 @@
         }
       }
     },
-    "angular-ngrx-material-starter-e2e": {
+    "nocsonic-starter-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -166,7 +166,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-ngrx-material-starter:serve"
+            "devServerTarget": "nocsonic-starter:serve"
           }
         },
         "lint": {
@@ -181,5 +181,5 @@
       }
     }
   },
-  "defaultProject": "angular-ngrx-material-starter"
+  "defaultProject": "nocsonic-starter"
 }

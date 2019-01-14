@@ -16,3 +16,7 @@ docker run --rm -it  --user $(id -u):$(id -g)  -v $PWD/crud-angular7-master:/app
 http://www.gistia.com/authentication-in-angular-with-ngrx-part-ii/
 
 https://github.com/ngrx/platform/blob/e6048bdab9198f75932631a3822767bbaabed54b/projects/example-app/src/app/books/reducers/books.reducer.ts
+
+https://github.com/thomasdtucker/a7-product-management
+https://github.com/tomastrajan/angular-ngrx-material-starter
+https://blog.thoughtram.io/angular/2017/05/23/custom-themes-with-angular-material.html

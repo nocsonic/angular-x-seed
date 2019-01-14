@@ -9,7 +9,7 @@ export const environment = {
   appName: 'NocSonic',
   envName: 'DEV',
   API: 'api',
-  HOST: 'http://localhost:8080',
+  HOST: 'http://localhost',
   PORT: '8080',
   production: false,
   test: false,
