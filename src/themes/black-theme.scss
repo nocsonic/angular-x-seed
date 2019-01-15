@@ -1,9 +1,0 @@
-$ns-black-primary: mat-palette($mat-grey, 700, 300, 900);
-$ns-black-accent: mat-palette($mat-blue-grey, 400);
-$ns-black-warn: mat-palette($mat-red, 500);
-
-$ns-black-theme: mat-dark-theme(
-  $ns-black-primary,
-  $ns-black-accent,
-  $ns-black-warn
-);

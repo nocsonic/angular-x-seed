@@ -12,6 +12,5 @@ import { Component } from '@angular/core';
 
 
 export class AppStageComponent {
-     theme:string = 'default-theme';
      constructor(){}
 }

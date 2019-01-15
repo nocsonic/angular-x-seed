@@ -1,58 +1,29 @@
 @import 'styles-variables';
 
-@import '../../node_modules/bootstrap/scss/bootstrap-reboot';
-@import '../../node_modules/bootstrap/scss/bootstrap-grid';
-@import 'styles-reset';
+@import '~@angular/material/theming';
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
 
-@import '../../node_modules/@angular/material/theming';
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,500');
 
-@include mat-core();
+@import '../themes/noc-dark-theme';
 
-@import '../themes/default-theme.scss';
-@import '../themes/light-theme.scss';
-@import '../themes/black-theme.scss';
-@import '../themes/nature-theme.scss';
-
-@import 'styles-reset.scss-theme';
-@import '../app/app-stage/app.stage.component.scss-theme';
-//@import '../app/shared/big-input/big-input.component.scss-theme';
-//@import '../app/static/about/about.component.scss-theme';
-//@import '../app/examples/notifications/components/notifications.component.scss-theme';
-//@import 'app/examples/todos/components/todos-container.component.scss-theme';
-//@import 'app/examples/stock-market/components/stock-market-container.component.scss-theme';
-//@import 'app/examples/theming/parent/parent.component.scss-theme';
-//@import 'app/examples/theming/child/child.component.scss-theme';
-//@import 'app/examples/examples/examples.component.scss-theme';
-
-@mixin custom-components-theme($theme) {
-  @include ns-styles-reset-theme($theme);
-  @include ns-app-component-theme($theme);
-//  @include ns-about-component-theme($theme);
-//  @include ns-big-input-component-theme($theme);
-//  @include ns-notifications-component-theme($theme);
-//  @include ns-todos-container-component-theme($theme);
-//  @include ns-stock-market-container-component-theme($theme);
-//  @include ns-parent-component-theme($theme);
-//  @include ns-child-component-theme($theme);
-//  @include ns-examples-component-theme($theme);
+.base-noc-theme{
+   @include angular-material-theme($theme);
 }
+html {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
 
-.default-theme {
-  @include angular-material-theme($ns-theme);
-  @include custom-components-theme($ns-theme);
-}
-
-.light-theme {
-  @include angular-material-theme($ns-light-theme);
-   @include custom-components-theme($ns-light-theme);
-}
-
-.black-theme {
-  @include angular-material-theme($ns-black-theme);
-  @include custom-components-theme($ns-black-theme);
-}
-
-.nature-theme {
-  @include angular-material-theme($ns-nature-theme);
-  @include custom-components-theme($ns-nature-theme);
+  > body {
+    display: flex;
+    flex-flow: column;
+    flex: auto;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    color: mat-contrast($mat-grey, 50);
+  }
 }

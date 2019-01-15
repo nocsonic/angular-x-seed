@@ -1,9 +1,0 @@
- $ns-light-primary: mat-palette($mat-grey, 200, 500, 300);
-$ns-light-accent: mat-palette($mat-brown, 200);
-$ns-light-warn: mat-palette($mat-deep-orange, 200);
-
-$ns-light-theme: mat-light-theme(
-  $ns-light-primary,
-  $ns-light-accent,
-  $ns-light-warn
-);

@@ -1,12 +1,12 @@
-//@import '../../../../scss/styles-variables';
-//
-//:host {
-//    display:flex;
-//    flex: 1 1 auto;
-//    align-items: center;
-//    justify-content: center;
-//}
-//
+@import '../../../../scss/styles-variables';
+
+:host {
+    display:flex;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: center;
+}
+
 //.btn {
 //  display: inline-block;
 //  position: relative;
