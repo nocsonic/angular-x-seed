@@ -8,16 +8,15 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,500');
 
 @import '../themes/noc-dark-theme';
+//@import '../themes/tut-custom-theme';
+@include angular-material-theme($custom-theme);
 
-.base-noc-theme{
-   @include angular-material-theme($theme);
-}
 html {
   display: flex;
   width: 100vw;
   height: 100vh;
-
   > body {
+    @include radial-gradient($dark-bg-lighter-5, $dark-bg-lighter-10,'center');
     display: flex;
     flex-flow: column;
     flex: auto;
