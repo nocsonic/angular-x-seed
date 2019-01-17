@@ -13,8 +13,7 @@ $grid-breakpoints: (
   xl: 1200px
 );
 
-$success-colors: mat-palette($mat-green, 400);
-$warning-colors: mat-palette($mat-amber, 400);
+
 
 
 @function rem($multiplier) {
@@ -73,6 +72,7 @@ $toolBarHeight:64px;
 $body-black:#1e1e1e;
 $very-dark-gray: #485156;
 $nav-color: #3e464c;
+$less-dark-gray:#9A9A9A;
 $steel-white:#DBDBDB;
 $dusty-white: #f5f1f5;
 $baby-powder:#fefefe;
@@ -83,7 +83,6 @@ $perlblue-color:#03568F;
 
 $defaultToolBarHeight: 64px;
 $border-reg-color: #7d7d7d;
-$cream-custard: #f3efe0;
 $input-color:#c4c4c4;
 
 $font-family: 'Lato', sans-serif !default;
@@ -92,7 +91,7 @@ $accent-orange: #D19435;
 
 
 // Light Theme Text
-$dark-text: #4a5674;
+$dark-text: #3b8997;
 $dark-primary-text: rgba($dark-text, 0.87);
 $dark-accent-text: rgba($dark-primary-text, 0.54);
 $dark-disabled-text: rgba($dark-primary-text, 0.38);
@@ -101,7 +100,7 @@ $dark-focused: rgba($dark-primary-text, 0.12);
 
 
 // Dark Theme text
-$light-text: #ADD8E6;
+$light-text: #ecffff;
 $light-primary-text: $light-text;
 $light-accent-text: rgba($light-primary-text, 0.7);
 $light-disabled-text: rgba($light-primary-text, 0.5);
