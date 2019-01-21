@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { MAT_DIALOG_DATA, MatDialogRef, MatFormFieldControl, MatSelectModule,  MatInputModule} from '@angular/material';
 import { Subscription } from 'rxjs/Subscription';
-import { SessionModel } from '../../../business-layer/models/session.model';
+import { SessionModel, LoginModel } from '../../../business-layer/models';
 import { BrokerDispatcherService } from '../../../business-layer/pubsub-broker/services/broker.dispatcher.service';
 import { BrokerResponse } from "../../../business-layer/pubsub-broker/models/broker.response.model";
 import { BrokerList } from '../../../business-layer/brokerage/ngrx-stubs/brokerlist';
@@ -16,7 +16,7 @@ import { BrokerList } from '../../../business-layer/brokerage/ngrx-stubs/brokerl
 export class LoginContainerComponent implements OnInit,  OnDestroy {
   layoutSub:Subscription;
   userSessionSub:Subscription;
-  public user:SessionModel;
+  public user:LoginModel;
   public errorMsg = '';
   private requestedUrl:string;
   requestedStarted:boolean;
@@ -31,7 +31,7 @@ export class LoginContainerComponent implements OnInit,  OnDestroy {
   }
 
   ngOnInit() {
-      this.user = <SessionModel>{};
+      this.user = <LoginModel>{};
       this.layoutSub = this.brokerRef.storeObs.layoutState$.subscribe(state => {
           this.requestedUrl = state.requestedURL;
       });
@@ -46,7 +46,7 @@ export class LoginContainerComponent implements OnInit,  OnDestroy {
                   }
               }else if(state.errorMessage) {
                  this.errorMsg = state.errorMessage;
-                 this.user = <SessionModel>{};
+                 this.user = <LoginModel>{};
               }
       });
   }
@@ -68,7 +68,7 @@ export class LoginContainerComponent implements OnInit,  OnDestroy {
      if(!this.requestedStarted) {
          this.requestedStarted = true;
          var note = this.brokerRef.storeDsp.LOGIN_USER_ATTEMPT;
-         note.payLoad =  <SessionModel>(this.user);
+         note.payLoad =  <LoginModel>(this.user);
          this.bDS.dispatchBrokerAction(note);
      }
   }

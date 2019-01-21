@@ -4,8 +4,8 @@ import { ValidationService } from "@app/business-layer/validators/services/valid
 
 @Component({
   selector: 'control-messages',
-    styles: ['div { color:#D73117 }'],
-  template: `<div *ngIf="errorMessage !== null">{{errorMessage}}</div>`
+  styleUrls: ['./validator.component.scss'],
+  template: `<div class="error-message" *ngIf="errorMessage !== null">{{errorMessage}}</div>`
 })
 
 export class ControlMessagesComponent {

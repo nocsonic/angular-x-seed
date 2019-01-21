@@ -1,6 +1,10 @@
 
 {
   "extends": "../tsconfig.json",
+  "angularCompilerOptions": {
+    "entryModule": "./app/app-stage/app.stage.module#AppStageModule",
+    "genDir": "../ngfactory"
+  },
   "compilerOptions": {
     "baseUrl": "",
     "outDir": "../out-tsc/app",

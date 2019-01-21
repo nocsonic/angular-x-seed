@@ -135,6 +135,10 @@ export class RegistrationComponent implements OnInit, OnDestroy {
       }
     }
 
+
+
+
+
     onSubmit() {
          if(this.newUser.valid) {
              const userObj = Object.assign({}, this.newUser.value.name,

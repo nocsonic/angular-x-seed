@@ -1,11 +1,12 @@
 const packageJson = require('../../package.json');
 
 export const environment = {
-  appName: 'NocSonic',
+  appName: 'ws-ngx-demo',
   envName: 'PROD',
   production: true,
   test: false,
-  i18nPrefix: 'nocsonic-starter',
+  i18nPrefix: 'ws-ngx-demo',
+  hmr: false,
   versions: {
     app: packageJson.version,
     angular: packageJson.dependencies['@angular/core'],
@@ -14,8 +15,6 @@ export const environment = {
     bootstrap: packageJson.dependencies.bootstrap,
     rxjs: packageJson.dependencies.rxjs,
     ngxtranslate: packageJson.dependencies['@ngx-translate/core'],
-    fontAwesome:
-      packageJson.dependencies['@fortawesome/fontawesome-free-webfonts'],
     angularCli: packageJson.devDependencies['@angular/cli'],
     typescript: packageJson.devDependencies['typescript'],
     cypress: packageJson.devDependencies['cypress']

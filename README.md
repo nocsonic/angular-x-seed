@@ -21,3 +21,4 @@ https://github.com/thomasdtucker/a7-product-management
 https://github.com/tomastrajan/angular-ngrx-material-starter
 https://blog.thoughtram.io/angular/2017/05/23/custom-themes-with-angular-material.html
 
+https://stackoverflow.com/questions/49519261/angular-5-nested-form-and-validation-and-property-controls-does-not-exist-on-t

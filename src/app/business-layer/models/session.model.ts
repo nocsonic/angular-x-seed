@@ -1,7 +1,6 @@
 import { UserModel } from './user.model';
 
-export interface SessionModel {
- user?: UserModel;
+export interface SessionModel extends UserModel {
  token?: string;
  loading?: boolean;
  loaded?: boolean;

@@ -19,6 +19,7 @@ a.registration-label{
    font-size:20px;
    color : $light-accent-text;
    margin-bottom:20px;
+   font-family: $font-family;
 }
 
 .login-card-title{
@@ -38,12 +39,14 @@ a.registration-label{
    flex-direction: row;  /* make main axis vertical */
    justify-content: center; /* center items vertically, in this case */
    align-items: center;
+   font-family: $font-family;
 }
 
 
   input.mat-input-element{
       padding-top: 10px;
       text-align:center;
+      font-family: $font-family;
   }
 
 

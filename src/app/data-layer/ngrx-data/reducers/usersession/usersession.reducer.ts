@@ -17,7 +17,7 @@ export interface State {
 
 
 export const initialState: State = {
-  user: {},
+  user:<UserModel>{},
   token:'',
   errorMessage:'',
   loading: false,
@@ -32,14 +32,14 @@ export function reducer(state = initialState, action: userSession.Actions | user
     case UserSessionActionTypes.LOGIN_USER_ATTEMPT:
     case UserSessionActionTypes.APP_START_CLEAR_LOGIN: {
           localStorage.clear();
-          return Object.assign({}, state, {user:{}, token:'', loading:false, loaded:false, errorMessage:'' });
+          return Object.assign({}, state, {user:<UserModel>{}, token:'', loading:false, loaded:false, errorMessage:'' });
     }
     case ProfileActionTypes.REGISTER_USER_SUCCESS:
     case UserSessionActionTypes.LOGIN_USER_SUCCESS: {
           if(action.payload.hasOwnProperty('user')) {
              const user:UserModel = <UserModel>(action.payload.user);
              const session:SessionModel = <SessionModel> action.payload;
-             if (state.user.hasOwnProperty('id') && (state.user.id === session.user.id)) {
+             if (state.user.hasOwnProperty('id') && (state.user.id === session.id)) {
                 return state;
              }
              localStorage.setItem('Authorized',  session.token);
@@ -51,7 +51,7 @@ export function reducer(state = initialState, action: userSession.Actions | user
 
     case UserSessionActionTypes.GET_SESSION_USER_SUCCESS: {
          const session:SessionModel= <SessionModel> action.payload;
-         if (state.user.hasOwnProperty('id') && (state.user.id === session.user.id)) {
+         if (state.user.hasOwnProperty('id') && (state.user.id === session.id)) {
             return state;
          }
          return Object.assign({}, state, session);
@@ -59,11 +59,11 @@ export function reducer(state = initialState, action: userSession.Actions | user
 
     case UserSessionActionTypes.LOGOUT_USER_SUCCESS: {
           localStorage.clear();
-          return Object.assign({}, state, {user:{}, token:'', loading:false, loaded:false,  errorMessage:'' });
+          return Object.assign({}, state, {user:<UserModel>{}, token:'', loading:false, loaded:false,  errorMessage:'' });
     }
 
     case UserSessionActionTypes.LOGIN_USER_FAILURE:{
-          return Object.assign({}, { user:{},
+          return Object.assign({}, { user:<UserModel>{},
                                      token:'',
                                      loading:false,
                                      loaded:false,

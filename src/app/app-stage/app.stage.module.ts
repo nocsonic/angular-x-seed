@@ -34,7 +34,6 @@ import { AppStageRoutingModule } from './app.stage.routing.module';
 
 
 @NgModule({
-  declarations: [ AppStageComponent ],
   imports: [
              CommonModule,
              BrowserModule,
@@ -52,7 +51,8 @@ import { AppStageRoutingModule } from './app.stage.routing.module';
   providers: [
     NGRxBrokerRegistrationService
     ],
-  bootstrap: [ AppStageComponent ]
+  bootstrap: [ AppStageComponent ],
+  declarations: [ AppStageComponent ],
 
 })
 

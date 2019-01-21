@@ -26,3 +26,10 @@ html {
     color: mat-contrast($mat-grey, 50);
   }
 }
+
+
+
+.mat-form-field.mat-form-field-invalid .mat-form-field-label{
+   color:lighten($accent-orange, 10%);
+   font-weight:200;
+}

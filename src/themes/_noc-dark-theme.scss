@@ -7,20 +7,24 @@
 // have to load a single css file for Angular Material in your app.
 
 
+@mixin custom-components-theme($theme) {
+  @include ns-styles-reset-theme($theme);
+}
+
 $fontConfig: (
-  display-4: mat-typography-level(112px, 112px, 300, $font-family, -0.0134em),
-  display-3: mat-typography-level(56px, 56px, 400, $font-family, -0.0089em),
-  display-2: mat-typography-level(45px, 48px, 400, $font-family, 0.0000em),
-  display-1: mat-typography-level(34px, 40px, 400, $font-family, 0.0074em),
-  headline: mat-typography-level(24px, 32px, 400, $font-family, 0.0000em),
-  title: mat-typography-level(20px, 32px, 500, $font-family, 0.0075em),
-  subheading-2: mat-typography-level(16px, 28px, 400, $font-family, 0.0094em),
-  subheading-1: mat-typography-level(15px, 24px, 500, $font-family, 0.0067em),
-  body-2: mat-typography-level(14px, 24px, 500, $font-family, 0.0179em),
-  body-1: mat-typography-level(14px, 20px, 400, $font-family, 0.0179em),
-  button: mat-typography-level(14px, 14px, 500, $font-family, 0.0893em),
-  caption: mat-typography-level(12px, 20px, 400, $font-family, 0.0333em),
-  input: mat-typography-level(inherits, 1.125, 400, $font-family, 1.5px)
+  display-4: mat-typography-level(112px, 112px, 300, 'Lato', -0.0134em),
+  display-3: mat-typography-level(56px, 56px, 400, 'Lato', -0.0089em),
+  display-2: mat-typography-level(45px, 48px, 400, 'Lato', 0.0000em),
+  display-1: mat-typography-level(34px, 40px, 400, 'Lato', 0.0074em),
+  headline: mat-typography-level(24px, 32px, 400, 'Lato', 0.0000em),
+  title: mat-typography-level(20px, 32px, 500, 'Lato', 0.0075em),
+  subheading-2: mat-typography-level(16px, 28px, 400, 'Lato', 0.0094em),
+  subheading-1: mat-typography-level(15px, 24px, 500, 'Lato', 0.0067em),
+  body-2: mat-typography-level(14px, 24px, 500, 'Lato', 0.0179em),
+  body-1: mat-typography-level(14px, 20px, 400, 'Lato', 0.0179em),
+  button: mat-typography-level(14px, 14px, 500, 'Lato', 0.0893em),
+  caption: mat-typography-level(12px, 20px, 400, 'Lato', 0.0333em),
+  input: mat-typography-level(inherits, 1.125, 400, 'Lato', 1.5px)
 );
 
 // Foreground Elements
@@ -135,9 +139,9 @@ $mat-accent: (
 $theme-accent: mat-palette($mat-accent, main, lighter, darker);
 
 $mat-warn: (
-  main: #D19435,
+  main: $accent-orange,
   lighter: #ffbf05,
-  darker: #ff0000,
+  darker: $danger,
   200: #ff0000, // For slide toggle,
   contrast : (
     main: $light-primary-text,
@@ -148,6 +152,7 @@ $mat-warn: (
 
 
 @function create-custom-theme($primary, $accent, $warn: mat-palette($mat-red)) {
+
   @return (
     primary: $primary,
     accent: $accent,
