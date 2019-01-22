@@ -1,5 +1,5 @@
 import { Observable, of } from 'rxjs';
-import { map, switchMap, filter, tap} from 'rxjs/operators';
+import { map, switchMap, filter, exhaustMap, tap} from 'rxjs/operators';
 import { Actions, Effect,ofType } from '@ngrx/effects';
 
 import { Router } from '@angular/router';
@@ -34,7 +34,7 @@ export class UserSessionEffects {
 
   @Effect() logoutUser$  = this.actions$.pipe(
    ofType(UserSessionActionTypes.LOGOUT_USER_ATTEMPT),
-   map(action => this.userServices.logoutUser(
+   exhaustMap( ()=>this.userServices.logoutUser(
     ErrorActionTypes.REPORT_ERROR,
     UserSessionActionTypes.LOGOUT_USER_FAILURE,
     UserSessionActionTypes.LOGOUT_USER_SUCCESS))
@@ -43,8 +43,7 @@ export class UserSessionEffects {
 
   @Effect() logoutUserSuccess$  = this.actions$.pipe(
     ofType(UserSessionActionTypes.LOGOUT_USER_SUCCESS),
-    map(action => of(this.router.navigateByUrl('/')))
-    );
+    tap( () => of(this.router.navigateByUrl('/'))));
 
 
  @Effect() removeErrorModleCheckUserFailure$ = this.actions$.pipe(

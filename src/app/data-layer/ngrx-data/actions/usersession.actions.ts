@@ -27,6 +27,7 @@ export class UserLoginFailure implements Action {
 
 export class UserLogoutAttempt implements Action {
   public readonly  type =  UserSessionActionTypes.LOGOUT_USER_ATTEMPT;
+  constructor() {}
 }
 
 export class UserLogoutSuccess implements Action {

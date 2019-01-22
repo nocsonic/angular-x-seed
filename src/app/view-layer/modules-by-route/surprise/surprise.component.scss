@@ -1,14 +1,8 @@
 @import '../../../../scss/styles-variables';
 
-:host {
-    display:flex;
-    flex: 1 1 auto;
-    align-items: stretch;
-    justify-content: center;
-}
-
 
 .jelly-container {
+  padding:50px;
   width: 100%;
   height: 100vh;
   overflow: hidden;
