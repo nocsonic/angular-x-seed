@@ -99,14 +99,14 @@ export class HttpWrapperService {
 
   private configRequest(uri: string, authRequired: boolean = false): {apiUrl: string, headerOptions:any} {
     let apiUrl = `${Config.HOST}:${Config.PORT}/${Config.API}/${uri}`;
-    let headerOptions = { header: authRequired ?
-        new HttpHeaders({
-        'Content-Type': 'application/json',
-        'x-access-token' : `${localStorage['Authorized']}`
-      }) :
-      new  HttpHeaders({'Content-Type': 'application/json'})
+    let headerOptions = { headers: authRequired ?
+        new  HttpHeaders({
+        'Content-Type':'application/json',
+        'x-access-token': `${localStorage.getItem('Authorized')}`
+        })
+       :
+        new  HttpHeaders({'Content-Type':'application/json'})
       };
-
 
     return {apiUrl, headerOptions};
   }

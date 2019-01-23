@@ -41,9 +41,11 @@ export class UserSessionEffects {
   );
 
 
-  @Effect() logoutUserSuccess$  = this.actions$.pipe(
-    ofType(UserSessionActionTypes.LOGOUT_USER_SUCCESS),
-    tap( () => of(this.router.navigateByUrl('/'))));
+  @Effect({ dispatch: false }) logoutUserSuccess$  = this.actions$.pipe(
+     ofType(UserSessionActionTypes.LOGOUT_USER_SUCCESS),
+     tap(() => this.router.navigateByUrl('/')
+     )
+  );
 
 
  @Effect() removeErrorModleCheckUserFailure$ = this.actions$.pipe(

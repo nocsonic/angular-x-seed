@@ -42,6 +42,7 @@ export function reducer(state = initialState, action: userSession.Actions | user
              if (state.user.hasOwnProperty('id') && (state.user.id === session.id)) {
                 return state;
              }
+             console.log('[ LOGIN_USER_SUCCESS --  session.token = ', session.token)
              localStorage.setItem('Authorized',  session.token);
              return Object.assign({}, state, session, {loading:false, loaded:true,  errorMessage:''});
           }else {
