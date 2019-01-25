@@ -1,6 +1,5 @@
 @import '../../../../scss/styles-variables';
 
-
 :host {
     display:flex;
     flex: 1 1 auto;
@@ -8,16 +7,15 @@
     justify-content: center;
 }
 
-
 .wrapper {
   background-color: #007aff;
-  width:100%;
   color: #fff;
   font-size: 100%;
   line-height: 1.5;
   font-family: "Roboto", sans-serif;
   display: flex;
   height: 100%;
+  width:100%;
   justify-content: flex-start; /* align items in Main Axis */
   align-items: stretch; /* align items in Cross Axis */
   align-content: stretch; /* Extra space in Cross Axis */
@@ -26,7 +24,6 @@
 .not-found{
   display: flex;
   flex:1 1;
-  align-items: center;
   justify-content: center;
   align-items: stretch; /* align items in Cross Axis */
   align-content: stretch;

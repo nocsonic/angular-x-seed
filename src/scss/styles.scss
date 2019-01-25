@@ -18,7 +18,7 @@ html {
   > body {
     @include radial-gradient($dark-bg-lighter-5, $dark-bg-lighter-10,'center');
     display: flex;
-    flex-flow: column;
+    flex-direction: column;
     flex: auto;
     padding: 0;
     margin: 0;
